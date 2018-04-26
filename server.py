@@ -11,7 +11,7 @@ import sys
 class RequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
-        self.send_header("Content-Type", "text/plain; charset=utf-8")
+        self.send_header("Content-Type", "application/javascript")
         self.end_headers()
         response = {
             'cipher': self.request.cipher(),
